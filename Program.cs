@@ -74,6 +74,8 @@ namespace Discord_bot
             var Result = await Commands.ExecuteAsync(Context, argPos);
             if (!Result.IsSuccess)
                 Console.WriteLine($"{DateTime.Now} at Commands] Something went wrong while executing the command. Text: {Context.Message.Content} | Error: {Result.ErrorReason}");
+        
+            client.login(process.env.BOT_TOKEN)
         }
     }
 }
